@@ -1,1 +1,4 @@
-Primero:
+Git clone repo
+git add .
+git commit -m "Comentario"
+git push
