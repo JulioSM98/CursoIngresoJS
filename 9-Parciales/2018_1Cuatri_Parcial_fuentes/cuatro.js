@@ -26,7 +26,7 @@ function mostrar()
         Recargo= 0.10;
         console.log(Recargo)
     }
-    if(descuento!=0){
+    if(descuento!=0 || Recargo!=0){
         totalD=Precioproducto*descuento;
         totalD=Precioproducto-totalD;
         if(Recargo!=0 ){
@@ -38,6 +38,7 @@ function mostrar()
             }
 
     }
+
     
     
     alert("Usted tiene un Descuento del "+(descuento*100)+"% y un recargo de "+(Recargo*100)+"%")
