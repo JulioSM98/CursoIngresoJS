@@ -41,7 +41,7 @@ function mostrar()
 
     
     
-    alert("Usted tiene un Descuento del "+(descuento*100)+"% y un recargo de "+(Recargo*100)+"%") */
+    alert("Usted tiene un Descuento del "+(descuento*100)+"% y un recargo de "+(Recargo*100)+"%") 
     var Numero1;
     var Numero2;
     var Numero3;
@@ -87,7 +87,28 @@ function mostrar()
     
     if(message!=""){
         alert(message);
+    }*/
+    var numero1;
+    var numero2;
+    var message;
+
+    numero1=prompt('Ingrese un numero');
+    numero2=prompt('Ingrese otro numero');
+
+    numero1=parseInt(numero1);
+    numero2=parseInt(numero2);
+
+    if (numero1==numero2){
+        message=numero1.toString()+numero2;
+    }else{
+        if(numero1>numero2){
+            message=numero1-numero2;
+        }else{
+            message=numero1+numero2;
+            if(message>10){
+                message="la suma es "+message+" y supero el 10";
+            }
+        }
     }
-
-
+    alert(message);
 }
