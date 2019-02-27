@@ -12,22 +12,21 @@ function mostrar()
     var pesoMax0g=0;
     var pesoMin0g=1000;
     while(decision==true){
-        entrada=prompt("ingrese el nombre, peso y temperatura del habita","marco, 40, -30");
-        nombre=entrada.split(", ")[0];
-        peso=entrada.split(", ")[1];
+        nombre=prompt("ingrese el nombre del animal");
+        peso=prompt("ingrese el peso")
         peso=parseInt(peso);
-        temperatura=entrada.split(", ")[2];
-        temperatura=parseInt(temperatura);
         while(isNaN(peso)==true||peso<1||peso>100){
             peso=prompt("reingrese el peso");
             peso=parseInt(peso);
         }
+        temperatura=prompt("ingrese la temperatura del habita")
+        temperatura=parseInt(temperatura);
         while(isNaN(temperatura)==true||temperatura<-30||temperatura>30){
             temperatura=prompt("Error en la temperatura, reingrese la temperatura del habita");
             temperatura=parseInt(temperatura);
         }
         //A
-        if(temperatura%=0){
+        if(temperatura%2==0){
             temperaturaPares=temperaturaPares+1;
         }
         //B
@@ -54,6 +53,13 @@ function mostrar()
 
         decision=confirm("continuar?")
     }
+    if(pesoMin0g==1000){
+        pesoMin0g=0;
+    }
     promedio=promedio/cont;
-    document.write("a")
+    document.write("a)La cantidad de temperaturas pares es de: "+temperaturaPares);
+    document.write("<br>"+"b) Nombre y temperatura del animal mas pesado: "+nombreMax+" y "+temperaturaMax);
+    document.write("<br>"+"c)La cantidad de animales que viven a menos de 0 grados: "+animalesFrios);
+    document.write("<br>"+"d)promedio del peso de todos los animales: "+promedio);
+    document.write("<br>"+"f)El peso maximo y minimo de todos los animales bajo 0: "+pesoMax0g+" y "+pesoMin0g)
 }
